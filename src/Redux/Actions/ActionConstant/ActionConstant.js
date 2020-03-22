@@ -1,0 +1,11 @@
+// Authentication
+const CONTACT_US_INIT = 'CONTACT_US_INIT';
+const CONTACT_US_SUCCESS = 'CONTACT_US_SUCCESS';
+const CONTACT_US_ERROR = 'CONTACT_US_ERROR';
+
+export {
+  // Authentication
+  CONTACT_US_INIT,
+  CONTACT_US_SUCCESS,
+  CONTACT_US_ERROR,
+};
