@@ -135,7 +135,7 @@ class HomePage extends Component {
                                 <div className="layer w-100">
                                   <h5 className="mB-5">35,056</h5>
                                   <small className="fw-600 c-grey-700">Cases From USA</small>
-                                  <span className="pull-right c-grey-600 fsz-sm">50%</span>
+                                  <span className="pull-right c-grey-600 fsz-sm">10.24%</span>
                                   <div className="progress mT-10">
                                     <div
                                       className="progress-bar bgc-deep-purple-500"
@@ -143,15 +143,15 @@ class HomePage extends Component {
                                       aria-valuenow="50"
                                       aria-valuemin="0"
                                       aria-valuemax="100"
-                                      style={{ width: '50%' }}>
-                                      <span className="sr-only">50% Complete</span>
+                                      style={{ width: '10%' }}>
+                                      <span className="sr-only">10% Complete</span>
                                     </div>
                                   </div>
                                 </div>
                                 <div className="layer w-100 mT-15">
-                                  <h5 className="mB-5">1M</h5>
-                                  <small className="fw-600 c-grey-700">Visitors From Europe</small>
-                                  <span className="pull-right c-grey-600 fsz-sm">80%</span>
+                                  <h5 className="mB-5">45,054</h5>
+                                  <small className="fw-600 c-grey-700">Cases From Europe</small>
+                                  <span className="pull-right c-grey-600 fsz-sm">12%</span>
                                   <div className="progress mT-10">
                                     <div
                                       className="progress-bar bgc-green-500"
@@ -159,17 +159,15 @@ class HomePage extends Component {
                                       aria-valuenow="50"
                                       aria-valuemin="0"
                                       aria-valuemax="100"
-                                      style={{ width: '80%' }}>
-                                      <span className="sr-only">80% Complete</span>
+                                      style={{ width: '12%' }}>
+                                      <span className="sr-only">12% Complete</span>
                                     </div>
                                   </div>
                                 </div>
                                 <div className="layer w-100 mT-15">
-                                  <h5 className="mB-5">450k</h5>
-                                  <small className="fw-600 c-grey-700">
-                                    Visitors From Australia
-                                  </small>
-                                  <span className="pull-right c-grey-600 fsz-sm">40%</span>
+                                  <h5 className="mB-5">20,021</h5>
+                                  <small className="fw-600 c-grey-700">Cases From Australia</small>
+                                  <span className="pull-right c-grey-600 fsz-sm">8%</span>
                                   <div className="progress mT-10">
                                     <div
                                       className="progress-bar bgc-light-blue-500"
@@ -177,15 +175,15 @@ class HomePage extends Component {
                                       aria-valuenow="50"
                                       aria-valuemin="0"
                                       aria-valuemax="100"
-                                      style={{ width: '40%' }}>
-                                      <span className="sr-only">40% Complete</span>
+                                      style={{ width: '8%' }}>
+                                      <span className="sr-only">8% Complete</span>
                                     </div>
                                   </div>
                                 </div>
                                 <div className="layer w-100 mT-15">
-                                  <h5 className="mB-5">1B</h5>
-                                  <small className="fw-600 c-grey-700">Visitors From India</small>
-                                  <span className="pull-right c-grey-600 fsz-sm">90%</span>
+                                  <h5 className="mB-5">100,023</h5>
+                                  <small className="fw-600 c-grey-700">Cases From Asia</small>
+                                  <span className="pull-right c-grey-600 fsz-sm">30%</span>
                                   <div className="progress mT-10">
                                     <div
                                       className="progress-bar bgc-blue-grey-500"
@@ -193,8 +191,8 @@ class HomePage extends Component {
                                       aria-valuenow="50"
                                       aria-valuemin="0"
                                       aria-valuemax="100"
-                                      style={{ width: '90%' }}>
-                                      <span className="sr-only">90% Complete</span>
+                                      style={{ width: '30%' }}>
+                                      <span className="sr-only">30% Complete</span>
                                     </div>
                                   </div>
                                 </div>
@@ -209,6 +207,7 @@ class HomePage extends Component {
                                     <span></span>
                                   </div>
                                   <h6 className="fsz-sm">Total Cases</h6>
+                                  <h5>342,407</h5>
                                 </div>
                                 <div className="peer">
                                   <div
@@ -219,6 +218,7 @@ class HomePage extends Component {
                                     <span></span>
                                   </div>
                                   <h6 className="fsz-sm">Deaths</h6>
+                                  <h5>14,762</h5>
                                 </div>
                                 <div className="peer">
                                   <div
@@ -229,6 +229,7 @@ class HomePage extends Component {
                                     <span></span>
                                   </div>
                                   <h6 className="fsz-sm">Recovered</h6>
+                                  <h5>99,041</h5>
                                 </div>
                               </div>
                             </div>
