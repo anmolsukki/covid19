@@ -18,25 +18,25 @@ class Main extends React.Component {
           link: '/home',
         },
         {
-          title: 'About',
-          isSelected: this.props.location.pathname === '/train-live-status' ? true : false,
-          link: '/train-live-status',
-        },
-        {
           title: 'Helpline',
-          isSelected: this.props.location.pathname === '/food-in-train' ? true : false,
-          link: '/food-in-train',
+          isSelected: this.props.location.pathname === '/helpline' ? true : false,
+          link: '/helpline',
         },
         {
-          title: 'Test Centres',
-          isSelected: this.props.location.pathname === '/pnr-status' ? true : false,
-          link: '/pnr-status',
+          title: 'About',
+          isSelected: this.props.location.pathname === '/about' ? true : false,
+          link: '/about',
         },
-        {
-          title: 'Sources',
-          isSelected: this.props.location.pathname === '/train-schedule' ? true : false,
-          link: '/train-schedule',
-        },
+        // {
+        //   title: 'Test Centres',
+        //   isSelected: this.props.location.pathname === '/pnr-status' ? true : false,
+        //   link: '/pnr-status',
+        // },
+        // {
+        //   title: 'Sources',
+        //   isSelected: this.props.location.pathname === '/train-schedule' ? true : false,
+        //   link: '/train-schedule',
+        // },
       ],
     };
   }

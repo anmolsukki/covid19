@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actionCreator from '../Redux/Actions/ActionTypes/index';
 import '../Assets/PortalTheme.css';
@@ -11,6 +10,12 @@ class HomePage extends Component {
   }
 
   componentDidMount = () => {
+    if (!localStorage.getItem('home')) {
+      localStorage.setItem('home', 'No Reload');
+    } else {
+      localStorage.removeItem('home');
+      window.location.reload();
+    }
     this.props.contactUsActionCall();
     this.props.dailyStatsActionCall();
   };
@@ -21,9 +26,6 @@ class HomePage extends Component {
     const recoveredCases =
       this.props.contactData.data && this.props.contactData.data.total.recovered;
     const deathCases = this.props.contactData.data && this.props.contactData.data.total.deaths;
-
-    // const dailyCases = this.props.dailyStatsData.data && this.props.dailyStatsData.data.pop();
-    // const todayCases = dailyCases && dailyCases.includes(new Date().toISOString().slice(0, 10));
 
     return (
       <div className="app is-collapsed">
@@ -284,15 +286,6 @@ class HomePage extends Component {
                     </div>
                   </div>
                   <div className="masonry-item col-md-6">
-                    <div className="bd bgc-white p-20">
-                      <div className="layers">
-                        <div className="layer w-100 mB-10">
-                          <h6 className="lh-1">India Corona Map</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="masonry-item col-md-6">
                     <div className="bd bgc-white">
                       <div className="layers">
                         <div className="layer w-100 p-20">
@@ -306,7 +299,7 @@ class HomePage extends Component {
                                 <p className="mB-0">Corona Report</p>
                               </div>
                               <div className="peer">
-                                <h3 className="text-right">Total: 432</h3>
+                                <h3 className="text-right">{confirmCases}</h3>
                               </div>
                             </div>
                           </div>
@@ -322,52 +315,34 @@ class HomePage extends Component {
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <td className="fw-600">Andhara Pradesh</td>
-                                  <td>
-                                    <span className="badge bgc-blue-50 c-blue-700 p-10 lh-0 tt-c badge-pill">
-                                      15
-                                    </span>
-                                  </td>
-                                  <td>12</td>
-                                  <td>
-                                    <span className="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">
-                                      3
-                                    </span>
-                                  </td>
-                                  <td>
-                                    <span className="text-success">8</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td className="fw-600">Andhara Pradesh</td>
-                                  <td>
-                                    <span className="badge bgc-blue-50 c-blue-700 p-10 lh-0 tt-c badge-pill">
-                                      15
-                                    </span>
-                                  </td>
-                                  <td>12</td>
-                                  <td>
-                                    <span className="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">
-                                      3
-                                    </span>
-                                  </td>
-                                  <td>
-                                    <span className="text-success">8</span>
-                                  </td>
-                                </tr>
+                                {this.props.contactData.data &&
+                                  this.props.contactData.data.statewise.map((item, index) => {
+                                    return (
+                                      <tr key={index}>
+                                        <td className="fw-600">{item.state}</td>
+                                        <td>
+                                          <span className="badge bgc-blue-50 c-blue-700 p-10 lh-0 tt-c badge-pill">
+                                            {item.confirmed}
+                                          </span>
+                                        </td>
+                                        <td>{item.active}</td>
+                                        <td>
+                                          <span className="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">
+                                            {item.deaths}
+                                          </span>
+                                        </td>
+                                        <td>
+                                          <span className="text-success">{item.recovered}</span>
+                                        </td>
+                                      </tr>
+                                    );
+                                  })}
                               </tbody>
                             </table>
                           </div>
                         </div>
                       </div>
-                      <div className="ta-c bdT w-100 p-20">
-                        <Link to="#">Check all States</Link>
-                      </div>
                     </div>
-                  </div>
-                  <div className="masonry-item col-md-6">
-                    Use this container for some other chart
                   </div>
                 </div>
               </div>
