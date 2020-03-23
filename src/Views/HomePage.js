@@ -15,6 +15,11 @@ class HomePage extends Component {
   };
 
   render() {
+    const confirmCases = this.props.contactData.data && this.props.contactData.data.total.confirmed;
+    const deathCases = this.props.contactData.data && this.props.contactData.data.total.deaths;
+    const activeCases = this.props.contactData.data && this.props.contactData.data.total.active;
+    const recoveredCases =
+      this.props.contactData.data && this.props.contactData.data.total.recovered;
     return (
       <div className="app is-collapsed">
         <div id="loader">
@@ -34,7 +39,7 @@ class HomePage extends Component {
                             <h6 className="lh-1">Total Cases</h6>
                           </div>
                           <div className="layer w-100">
-                            <h2>400</h2>
+                            <h2>{confirmCases}</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash"></span>
@@ -54,14 +59,14 @@ class HomePage extends Component {
                             <h6 className="lh-1">Hospitalized Cases</h6>
                           </div>
                           <div className="layer w-100">
-                            <h2>378</h2>
+                            <h2>{activeCases}</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash2"></span>
                               </div>
                               <div className="peer">
                                 <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">
-                                  92% of total cases
+                                  {Math.ceil((activeCases * 100) / confirmCases)}% of total cases
                                 </span>
                               </div>
                             </div>
@@ -74,14 +79,14 @@ class HomePage extends Component {
                             <h6 className="lh-1">Recovered Cases</h6>
                           </div>
                           <div className="layer w-100">
-                            <h2>24</h2>
+                            <h2>{recoveredCases}</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash3"></span>
                               </div>
                               <div className="peer">
                                 <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">
-                                  6% of total cases
+                                  {Math.ceil((recoveredCases * 100) / confirmCases)}% of total cases
                                 </span>
                               </div>
                             </div>
@@ -94,14 +99,14 @@ class HomePage extends Component {
                             <h6 className="lh-1">Deaths</h6>
                           </div>
                           <div className="layer w-100">
-                            <h2>8</h2>
+                            <h2>{deathCases}</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash4"></span>
                               </div>
                               <div className="peer">
                                 <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">
-                                  2% of total cases
+                                  {Math.ceil((deathCases * 100) / confirmCases)}% of total cases
                                 </span>
                               </div>
                             </div>
@@ -769,7 +774,7 @@ class HomePage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const CtrContactData = state.CtrContact;
+  const CtrContactData = state.CtrContact.reduContactData;
   return {
     contactData: CtrContactData,
   };

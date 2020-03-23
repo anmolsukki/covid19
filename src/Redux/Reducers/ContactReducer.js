@@ -1,7 +1,7 @@
 import * as actionConstant from '../Actions/ActionConstant/ActionConstant';
 
 const initialState = {
-  ReduContactData: [],
+  reduContactData: [],
   isLoading: false,
   error: null,
 };
@@ -16,7 +16,7 @@ const ContactReducer = (state = initialState, action) => {
     case actionConstant.CONTACT_US_SUCCESS:
       return {
         ...state,
-        ReduContactData: action.data ? action.data : null,
+        reduContactData: action.data ? action.data : null,
         isLoading: false,
       };
     case actionConstant.CONTACT_US_ERROR:
