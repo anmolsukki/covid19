@@ -16,10 +16,11 @@ class HomePage extends Component {
 
   render() {
     const confirmCases = this.props.contactData.data && this.props.contactData.data.total.confirmed;
-    const deathCases = this.props.contactData.data && this.props.contactData.data.total.deaths;
     const activeCases = this.props.contactData.data && this.props.contactData.data.total.active;
     const recoveredCases =
       this.props.contactData.data && this.props.contactData.data.total.recovered;
+    const deathCases = this.props.contactData.data && this.props.contactData.data.total.deaths;
+
     return (
       <div className="app is-collapsed">
         <div id="loader">
@@ -39,7 +40,7 @@ class HomePage extends Component {
                             <h6 className="lh-1">Total Cases</h6>
                           </div>
                           <div className="layer w-100">
-                            <h2>{confirmCases}</h2>
+                            <h2>{confirmCases ? confirmCases : 0}</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash"></span>
