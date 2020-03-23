@@ -2,7 +2,6 @@ import * as actionConstant from '../Actions/ActionConstant/ActionConstant';
 
 const initialState = {
   ReduContactData: [],
-  ReduSubscribeData: [],
   isLoading: false,
   error: null,
 };

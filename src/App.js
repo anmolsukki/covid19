@@ -11,11 +11,13 @@ const DefaultLayout = loadable(() => import('./Containers'), {
 class App extends Component {
   render() {
     return (
-      <HashRouter>
-        <Switch>
-          <Route path="/" component={DefaultLayout} />
-        </Switch>
-      </HashRouter>
+      <main style={{ marginTop: '56px' }}>
+        <HashRouter>
+          <Switch>
+            <Route path="/" component={DefaultLayout} />
+          </Switch>
+        </HashRouter>
+      </main>
     );
   }
 }

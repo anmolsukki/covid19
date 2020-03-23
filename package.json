@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "env-cmd": "^10.1.0",
     "loadable-components": "^2.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -17,22 +19,10 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "PORT=8080 env-cmd -f .env.development react-scripts start",
+    "build": "env-cmd -f .env.production react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --write",
-      "eslint --fix src/",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,8 +42,6 @@
   "devDependencies": {
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
     "prettier": "^2.0.1"
   }
 }
