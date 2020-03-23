@@ -13,9 +13,14 @@ class Main extends React.Component {
       sideDrawerOpen: false,
       navData: [
         {
-          title: 'Home',
+          title: 'Covid19 India',
           isSelected: this.props.location.pathname === '/home' ? true : false,
           link: '/home',
+        },
+        {
+          title: 'About',
+          isSelected: this.props.location.pathname === '/train-live-status' ? true : false,
+          link: '/train-live-status',
         },
         {
           title: 'Helpline',
@@ -31,11 +36,6 @@ class Main extends React.Component {
           title: 'Sources',
           isSelected: this.props.location.pathname === '/train-schedule' ? true : false,
           link: '/train-schedule',
-        },
-        {
-          title: 'About',
-          isSelected: this.props.location.pathname === '/train-live-status' ? true : false,
-          link: '/train-live-status',
         },
       ],
     };
