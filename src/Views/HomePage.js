@@ -21,120 +21,175 @@ class HomePage extends Component {
         </div>
         <div>
           <div>
-            <div id="mainContent">
-              <div className="row gap-20 masonry pos-r">
-                <div className="masonry-sizer col-md-6"></div>
-                <div className="masonry-item w-100">
-                  <h3>Coronavirus Outbreak in India</h3>
-                  <div className="row gap-20">
-                    <div className="col-md-3">
-                      <div className="layers bd bgc-white p-20">
-                        <div className="layer w-100 mB-10">
-                          <h6 className="lh-1">Total Visits</h6>
-                        </div>
-                        <div className="layer w-100">
-                          <div className="peers ai-sb fxw-nw">
-                            <div className="peer peer-greed">
-                              <span id="sparklinedash"></span>
-                            </div>
-                            <div className="peer">
-                              <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">
-                                +10%
-                              </span>
+            <main className="main-content bgc-grey-100">
+              <div id="mainContent">
+                <div className="row gap-20 masonry pos-r">
+                  <div className="masonry-sizer col-md-6"></div>
+                  <div className="masonry-item w-100">
+                    <div className="row gap-20">
+                      <div className="col-md-3">
+                        <div className="layers bd bgc-white p-20">
+                          <div className="layer w-100 mB-10">
+                            <h6 className="lh-1">Total Cases</h6>
+                          </div>
+                          <div className="layer w-100">
+                            <h2>400</h2>
+                            <div className="peers ai-sb fxw-nw">
+                              <div className="peer peer-greed">
+                                <span id="sparklinedash"></span>
+                              </div>
+                              <div className="peer">
+                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">
+                                  +10 Today
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="col-md-3">
-                      <div className="layers bd bgc-white p-20">
-                        <div className="layer w-100 mB-10">
-                          <h6 className="lh-1">Total Page Views</h6>
-                        </div>
-                        <div className="layer w-100">
-                          <div className="peers ai-sb fxw-nw">
-                            <div className="peer peer-greed">
-                              <span id="sparklinedash2"></span>
-                            </div>
-                            <div className="peer">
-                              <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">
-                                -7%
-                              </span>
+                      <div className="col-md-3">
+                        <div className="layers bd bgc-white p-20">
+                          <div className="layer w-100 mB-10">
+                            <h6 className="lh-1">Hospitalized Cases</h6>
+                          </div>
+                          <div className="layer w-100">
+                            <h2>378</h2>
+                            <div className="peers ai-sb fxw-nw">
+                              <div className="peer peer-greed">
+                                <span id="sparklinedash2"></span>
+                              </div>
+                              <div className="peer">
+                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">
+                                  92% of total cases
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="col-md-3">
-                      <div className="layers bd bgc-white p-20">
-                        <div className="layer w-100 mB-10">
-                          <h6 className="lh-1">Unique Visitor</h6>
-                        </div>
-                        <div className="layer w-100">
-                          <div className="peers ai-sb fxw-nw">
-                            <div className="peer peer-greed">
-                              <span id="sparklinedash3"></span>
-                            </div>
-                            <div className="peer">
-                              <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">
-                                ~12%
-                              </span>
+                      <div className="col-md-3">
+                        <div className="layers bd bgc-white p-20">
+                          <div className="layer w-100 mB-10">
+                            <h6 className="lh-1">Recovered Cases</h6>
+                          </div>
+                          <div className="layer w-100">
+                            <h2>24</h2>
+                            <div className="peers ai-sb fxw-nw">
+                              <div className="peer peer-greed">
+                                <span id="sparklinedash3"></span>
+                              </div>
+                              <div className="peer">
+                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">
+                                  6% of total cases
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="col-md-3">
-                      <div className="layers bd bgc-white p-20">
-                        <div className="layer w-100 mB-10">
-                          <h6 className="lh-1">Bounce Rate</h6>
-                        </div>
-                        <div className="layer w-100">
-                          <div className="peers ai-sb fxw-nw">
-                            <div className="peer peer-greed">
-                              <span id="sparklinedash4"></span>
-                            </div>
-                            <div className="peer">
-                              <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">
-                                33%
-                              </span>
+                      <div className="col-md-3">
+                        <div className="layers bd bgc-white p-20">
+                          <div className="layer w-100 mB-10">
+                            <h6 className="lh-1">Deaths</h6>
+                          </div>
+                          <div className="layer w-100">
+                            <h2>8</h2>
+                            <div className="peers ai-sb fxw-nw">
+                              <div className="peer peer-greed">
+                                <span id="sparklinedash4"></span>
+                              </div>
+                              <div className="peer">
+                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">
+                                  2% of total cases
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="masonry-item col-12">
-                  <div className="bd bgc-white">
-                    <div className="peers fxw-nw@lg+ ai-s">
-                      <div className="peer peer-greed w-70p@lg+ w-100@lg- p-20">
-                        <div className="layers">
-                          <div className="layer w-100 mB-10">
-                            <h6 className="lh-1">Site Visits</h6>
-                          </div>
-                          <div className="layer w-100">
-                            <div id="world-map-marker"></div>
+                  <div className="masonry-item col-12">
+                    <div className="bd bgc-white">
+                      <div className="peers fxw-nw@lg+ ai-s">
+                        <div className="peer peer-greed w-70p@lg+ w-100@lg- p-20">
+                          <div className="layers">
+                            <div className="layer w-100 mB-10">
+                              <h6 className="lh-1">World Wide</h6>
+                            </div>
+                            <div className="layer w-100">
+                              <div id="world-map-marker"></div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="peer bdL p-20 w-30p@lg+ w-100p@lg-">
-                        <div className="layers">
-                          <div className="layer w-100">
-                            <div className="layers">
-                              <div className="layer w-100">
-                                <h5 className="mB-5">100k</h5>
-                                <small className="fw-600 c-grey-700">Visitors From USA</small>
-                                <span className="pull-right c-grey-600 fsz-sm">50%</span>
-                                <div className="progress mT-10">
-                                  <div
-                                    className="progress-bar bgc-deep-purple-500"
-                                    role="progressbar"
-                                    aria-valuenow="50"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                    style={{ width: '50%' }}>
-                                    <span className="sr-only">50% Complete</span>
+                        <div className="peer bdL p-20 w-30p@lg+ w-100p@lg-">
+                          <div className="layers">
+                            <div className="layer w-100">
+                              <div className="layers">
+                                <div className="layer w-100">
+                                  <h5 className="mB-5">35,056</h5>
+                                  <small className="fw-600 c-grey-700">Cases From USA</small>
+                                  <span className="pull-right c-grey-600 fsz-sm">50%</span>
+                                  <div className="progress mT-10">
+                                    <div
+                                      className="progress-bar bgc-deep-purple-500"
+                                      role="progressbar"
+                                      aria-valuenow="50"
+                                      aria-valuemin="0"
+                                      aria-valuemax="100"
+                                      style={{ width: '50%' }}>
+                                      <span className="sr-only">50% Complete</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="layer w-100 mT-15">
+                                  <h5 className="mB-5">1M</h5>
+                                  <small className="fw-600 c-grey-700">Visitors From Europe</small>
+                                  <span className="pull-right c-grey-600 fsz-sm">80%</span>
+                                  <div className="progress mT-10">
+                                    <div
+                                      className="progress-bar bgc-green-500"
+                                      role="progressbar"
+                                      aria-valuenow="50"
+                                      aria-valuemin="0"
+                                      aria-valuemax="100"
+                                      style={{ width: '80%' }}>
+                                      <span className="sr-only">80% Complete</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="layer w-100 mT-15">
+                                  <h5 className="mB-5">450k</h5>
+                                  <small className="fw-600 c-grey-700">
+                                    Visitors From Australia
+                                  </small>
+                                  <span className="pull-right c-grey-600 fsz-sm">40%</span>
+                                  <div className="progress mT-10">
+                                    <div
+                                      className="progress-bar bgc-light-blue-500"
+                                      role="progressbar"
+                                      aria-valuenow="50"
+                                      aria-valuemin="0"
+                                      aria-valuemax="100"
+                                      style={{ width: '40%' }}>
+                                      <span className="sr-only">40% Complete</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="layer w-100 mT-15">
+                                  <h5 className="mB-5">1B</h5>
+                                  <small className="fw-600 c-grey-700">Visitors From India</small>
+                                  <span className="pull-right c-grey-600 fsz-sm">90%</span>
+                                  <div className="progress mT-10">
+                                    <div
+                                      className="progress-bar bgc-blue-grey-500"
+                                      role="progressbar"
+                                      aria-valuenow="50"
+                                      aria-valuemin="0"
+                                      aria-valuemax="100"
+                                      style={{ width: '90%' }}>
+                                      <span className="sr-only">90% Complete</span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -144,14 +199,13 @@ class HomePage extends Component {
                                 <span className="pull-right c-grey-600 fsz-sm">80%</span>
                                 <div className="progress mT-10">
                                   <div
-                                    className="progress-bar bgc-green-500"
-                                    role="progressbar"
-                                    aria-valuenow="50"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                    style={{ width: '80%' }}>
-                                    <span className="sr-only">80% Complete</span>
+                                    className="easy-pie-chart"
+                                    data-size="80"
+                                    data-percent="100"
+                                    data-bar-color="#2196f3">
+                                    <span></span>
                                   </div>
+                                  <h6 className="fsz-sm">Total Cases</h6>
                                 </div>
                               </div>
                               <div className="layer w-100 mT-15">
@@ -160,14 +214,13 @@ class HomePage extends Component {
                                 <span className="pull-right c-grey-600 fsz-sm">40%</span>
                                 <div className="progress mT-10">
                                   <div
-                                    className="progress-bar bgc-light-blue-500"
-                                    role="progressbar"
-                                    aria-valuenow="50"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                    style={{ width: '40%' }}>
-                                    <span className="sr-only">40% Complete</span>
+                                    className="easy-pie-chart"
+                                    data-size="80"
+                                    data-percent="5"
+                                    data-bar-color="#f44336">
+                                    <span></span>
                                   </div>
+                                  <h6 className="fsz-sm">Deaths</h6>
                                 </div>
                               </div>
                               <div className="layer w-100 mT-15">
@@ -176,14 +229,13 @@ class HomePage extends Component {
                                 <span className="pull-right c-grey-600 fsz-sm">90%</span>
                                 <div className="progress mT-10">
                                   <div
-                                    className="progress-bar bgc-blue-grey-500"
-                                    role="progressbar"
-                                    aria-valuenow="50"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                    style={{ width: '90%' }}>
-                                    <span className="sr-only">90% Complete</span>
+                                    className="easy-pie-chart"
+                                    data-size="80"
+                                    data-percent="30"
+                                    data-bar-color="#ff9800">
+                                    <span></span>
                                   </div>
+                                  <h6 className="fsz-sm">Recovered</h6>
                                 </div>
                               </div>
                             </div>
