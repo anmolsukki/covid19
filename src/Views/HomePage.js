@@ -19,16 +19,17 @@ class HomePage extends Component {
                       <div className="col-md-3">
                         <div className="layers bd bgc-white p-20">
                           <div className="layer w-100 mB-10">
-                            <h6 className="lh-1">Total Visits</h6>
+                            <h6 className="lh-1">Total Cases</h6>
                           </div>
                           <div className="layer w-100">
+                            <h2>400</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash"></span>
                               </div>
                               <div className="peer">
-                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">
-                                  +10%
+                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">
+                                  +10 Today
                                 </span>
                               </div>
                             </div>
@@ -38,16 +39,17 @@ class HomePage extends Component {
                       <div className="col-md-3">
                         <div className="layers bd bgc-white p-20">
                           <div className="layer w-100 mB-10">
-                            <h6 className="lh-1">Total Page Views</h6>
+                            <h6 className="lh-1">Hospitalized Cases</h6>
                           </div>
                           <div className="layer w-100">
+                            <h2>378</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash2"></span>
                               </div>
                               <div className="peer">
-                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">
-                                  -7%
+                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">
+                                  92% of total cases
                                 </span>
                               </div>
                             </div>
@@ -57,16 +59,17 @@ class HomePage extends Component {
                       <div className="col-md-3">
                         <div className="layers bd bgc-white p-20">
                           <div className="layer w-100 mB-10">
-                            <h6 className="lh-1">Unique Visitor</h6>
+                            <h6 className="lh-1">Recovered Cases</h6>
                           </div>
                           <div className="layer w-100">
+                            <h2>24</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash3"></span>
                               </div>
                               <div className="peer">
-                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">
-                                  ~12%
+                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">
+                                  6% of total cases
                                 </span>
                               </div>
                             </div>
@@ -76,16 +79,17 @@ class HomePage extends Component {
                       <div className="col-md-3">
                         <div className="layers bd bgc-white p-20">
                           <div className="layer w-100 mB-10">
-                            <h6 className="lh-1">Bounce Rate</h6>
+                            <h6 className="lh-1">Deaths</h6>
                           </div>
                           <div className="layer w-100">
+                            <h2>8</h2>
                             <div className="peers ai-sb fxw-nw">
                               <div className="peer peer-greed">
                                 <span id="sparklinedash4"></span>
                               </div>
                               <div className="peer">
-                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-blue-50 c-blue-500">
-                                  33%
+                                <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">
+                                  2% of total cases
                                 </span>
                               </div>
                             </div>
@@ -100,7 +104,7 @@ class HomePage extends Component {
                         <div className="peer peer-greed w-70p@lg+ w-100@lg- p-20">
                           <div className="layers">
                             <div className="layer w-100 mB-10">
-                              <h6 className="lh-1">Site Visits</h6>
+                              <h6 className="lh-1">World Wide</h6>
                             </div>
                             <div className="layer w-100">
                               <div id="world-map-marker"></div>
@@ -112,8 +116,8 @@ class HomePage extends Component {
                             <div className="layer w-100">
                               <div className="layers">
                                 <div className="layer w-100">
-                                  <h5 className="mB-5">100k</h5>
-                                  <small className="fw-600 c-grey-700">Visitors From USA</small>
+                                  <h5 className="mB-5">35,056</h5>
+                                  <small className="fw-600 c-grey-700">Cases From USA</small>
                                   <span className="pull-right c-grey-600 fsz-sm">50%</span>
                                   <div className="progress mT-10">
                                     <div
@@ -183,31 +187,31 @@ class HomePage extends Component {
                                   <div
                                     className="easy-pie-chart"
                                     data-size="80"
-                                    data-percent="75"
-                                    data-bar-color="#f44336">
-                                    <span></span>
-                                  </div>
-                                  <h6 className="fsz-sm">New Users</h6>
-                                </div>
-                                <div className="peer">
-                                  <div
-                                    className="easy-pie-chart"
-                                    data-size="80"
-                                    data-percent="50"
+                                    data-percent="100"
                                     data-bar-color="#2196f3">
                                     <span></span>
                                   </div>
-                                  <h6 className="fsz-sm">New Purchases</h6>
+                                  <h6 className="fsz-sm">Total Cases</h6>
                                 </div>
                                 <div className="peer">
                                   <div
                                     className="easy-pie-chart"
                                     data-size="80"
-                                    data-percent="90"
+                                    data-percent="5"
+                                    data-bar-color="#f44336">
+                                    <span></span>
+                                  </div>
+                                  <h6 className="fsz-sm">Deaths</h6>
+                                </div>
+                                <div className="peer">
+                                  <div
+                                    className="easy-pie-chart"
+                                    data-size="80"
+                                    data-percent="30"
                                     data-bar-color="#ff9800">
                                     <span></span>
                                   </div>
-                                  <h6 className="fsz-sm">Bounce Rate</h6>
+                                  <h6 className="fsz-sm">Recovered</h6>
                                 </div>
                               </div>
                             </div>
