@@ -18,3 +18,20 @@ export const ContactUsAction = () => {
       });
   };
 };
+
+export const DailyStats = () => {
+  let url = `${process.env.REACT_APP_BASE_URL}/stats/daily`;
+  return async (dispatch) => {
+    dispatch(actionTypes.DAILY_INIT());
+    return axios
+      .get(url, { headers: await getHeaders(true) })
+      .then((res) => {
+        console.log(res, 'Daily Data Getting Succes');
+        dispatch(actionTypes.DAILY_SUCCESS(res.data));
+      })
+      .catch((error) => {
+        console.log(error, 'Daily Data Getting Error');
+        dispatch(actionTypes.DAILY_ERROR(error));
+      });
+  };
+};

@@ -1,1 +1,1 @@
-export { ContactUsAction } from '../Action/ContactAction';
+export { ContactUsAction, DailyStats } from '../Action/ContactAction';

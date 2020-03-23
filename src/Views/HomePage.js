@@ -12,6 +12,7 @@ class HomePage extends Component {
 
   componentDidMount = () => {
     this.props.contactUsActionCall();
+    this.props.dailyStatsActionCall();
   };
 
   render() {
@@ -20,6 +21,9 @@ class HomePage extends Component {
     const recoveredCases =
       this.props.contactData.data && this.props.contactData.data.total.recovered;
     const deathCases = this.props.contactData.data && this.props.contactData.data.total.deaths;
+
+    // const dailyCases = this.props.dailyStatsData.data && this.props.dailyStatsData.data.pop();
+    // const todayCases = dailyCases && dailyCases.includes(new Date().toISOString().slice(0, 10));
 
     return (
       <div className="app is-collapsed">
@@ -47,7 +51,7 @@ class HomePage extends Component {
                               </div>
                               <div className="peer">
                                 <span className="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-purple-50 c-purple-500">
-                                  +10 Today
+                                  Till Now
                                 </span>
                               </div>
                             </div>
@@ -777,14 +781,17 @@ class HomePage extends Component {
 
 const mapStateToProps = (state) => {
   const CtrContactData = state.CtrContact.reduContactData;
+  const CtrDailyStatsData = state.CtrContact.reduDailyData;
   return {
     contactData: CtrContactData,
+    dailyStatsData: CtrDailyStatsData,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     contactUsActionCall: () => dispatch(actionCreator.ContactUsAction()),
+    dailyStatsActionCall: () => dispatch(actionCreator.DailyStats()),
   };
 };
 

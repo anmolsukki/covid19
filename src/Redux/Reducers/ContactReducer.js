@@ -2,6 +2,7 @@ import * as actionConstant from '../Actions/ActionConstant/ActionConstant';
 
 const initialState = {
   reduContactData: [],
+  reduDailyData: [],
   isLoading: false,
   error: null,
 };
@@ -20,6 +21,24 @@ const ContactReducer = (state = initialState, action) => {
         isLoading: false,
       };
     case actionConstant.CONTACT_US_ERROR:
+      return {
+        ...state,
+        error: action.data ? action.data : null,
+        isLoading: false,
+      };
+
+    case actionConstant.DAILY_STATS_INIT:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case actionConstant.DAILY_STATS_SUCCESS:
+      return {
+        ...state,
+        reduDailyData: action.data ? action.data : null,
+        isLoading: false,
+      };
+    case actionConstant.DAILY_STATS_ERROR:
       return {
         ...state,
         error: action.data ? action.data : null,
