@@ -118,53 +118,6 @@ class TestCenter extends Component {
               </tr>
             </tbody>
           </table>
-          <div className="">
-            <img src="andhra.jpg" className="card-img-top" style={{ width: '38%' }} alt="..." />
-            <div className="card-body">
-              {/* <h5 className="card-title">Andhra Pradesh</h5> */}
-              <table class="table" style={{ width: '400px' }}>
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">S.No.</th>
-                    <th scope="col">Specification</th>
-                    <th scope="col">Count</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Rural Hospitals</td>
-                    <td>193</td>
-                  </tr>
-                  <tr className="table-success">
-                    <th scope="row">2</th>
-                    <td>Rural Beds</td>
-                    <td>6480</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Urban Hospitals</td>
-                    <td>65</td>
-                  </tr>
-                  <tr className="table-success">
-                    <th scope="row">4</th>
-                    <td>Urban Beds</td>
-                    <td>16658</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Total Hospitals</td>
-                    <td>258</td>
-                  </tr>
-                  <tr className="table-success">
-                    <th scope="row">1</th>
-                    <td>Total Beds</td>
-                    <td>23138</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
       </div>
     );

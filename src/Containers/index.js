@@ -32,11 +32,11 @@ class Main extends React.Component {
           isSelected: this.props.location.pathname === '/test-center' ? true : false,
           link: '/test-center',
         },
-        {
-          title: 'Sources',
-          isSelected: this.props.location.pathname === '/sources' ? true : false,
-          link: '/sources',
-        },
+        // {
+        //   title: 'Sources',
+        //   isSelected: this.props.location.pathname === '/sources' ? true : false,
+        //   link: '/sources',
+        // },
       ],
     };
   }
