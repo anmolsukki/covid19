@@ -348,17 +348,23 @@ class HomePage extends Component {
               </div>
             </main>
             <footer className="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
-              <span>
-                Copyright © 2020&nbsp;
-                <a
-                  href="http://coronacontrol.in"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Corona_control">
-                  Corona control
-                </a>
-                . All rights reserved.
-              </span>
+              <div className="footer-bottom">
+                <div className="container">
+                  <div className="row">
+                    <p className="pull-left">
+                      Copyright © 2020{' '}
+                      <a
+                        href="http://coronacontrol.in"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Corona_control">
+                        Corona control
+                      </a>
+                      . All rights reserved.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </footer>
           </div>
         </div>
