@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
+import '../Assets/PortalTheme.css';
 
 class About extends Component {
   render() {
     return (
-      <div>
+      <div style={{ background: '#f3f1f1' }}>
         <section>
           <div className="row clear-margins">
-            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 mt-5 mx-auto">
+            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-12 mt-3 mx-auto">
               <div className="about-page">
                 <h1 className="heading">About</h1>
                 <p className="description">
@@ -52,6 +54,9 @@ class About extends Component {
               </div>
             </div>
           </div>
+        </section>
+        <section>
+          <Footer />
         </section>
       </div>
     );

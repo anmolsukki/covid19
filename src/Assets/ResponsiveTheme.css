@@ -1,0 +1,28 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-page .heading {
+    color: #1c2e3d;
+    font-size: 25px !important;
+    font-family: 'auto';
+  }
+
+  .about-page .description {
+    width: 100%;
+    color: #1c2e3d;
+    font-size: 16px !important;
+    font-family: 'auto';
+    line-height: 1.9;
+    text-align: justify;
+  }
+
+  .toll-free {
+    float: unset !important;
+  }
+
+  .footer-pos {
+    text-align: left !important;
+  }
+
+  .news-section {
+    padding: unset !important;
+  }
+}

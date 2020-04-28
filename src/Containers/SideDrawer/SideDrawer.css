@@ -22,7 +22,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 30px;
+  margin: 0;
 }
 
 .side-drawer a {
@@ -33,10 +33,11 @@
 
 .side-drawer li {
   padding: 6px;
-  margin-left: -30px;
+  margin-left: -40px;
   font-size: 20px;
   cursor: pointer;
   font-weight: 600;
+  border-bottom: 1px solid #ced4da;
 }
 
 .side-drawer a:hover,

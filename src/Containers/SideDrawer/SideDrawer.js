@@ -17,7 +17,8 @@ const sideDrawer = (props) => {
               <Link
                 to={item.link}
                 className={`nav-option ${item.isSelected === true ? 'active' : ''}`}
-                onClick={() => props.bacDrawer(item)}>
+                onClick={() => props.bacDrawer() && props.addClass(item)}>
+                <i className={item.icon} style={{ margin: '7px' }}></i>
                 {item.title}
               </Link>
             </li>

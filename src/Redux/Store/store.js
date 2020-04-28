@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import ContactReducer from '../Reducers/ContactReducer';
+import CoronaReducer from '../Reducers/CoronaReducer';
 
 const reducer = combineReducers({
-  CtrContact: ContactReducer,
+  CtrCorona: CoronaReducer,
 });
 
 const logger = (store) => {

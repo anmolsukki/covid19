@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { Container } from 'reactstrap';
 import Navbar from './Toolbars/Toolbar';
 import SideDrawer from './SideDrawer/SideDrawer';
 import Backdrop from './BackDrop/BackDrop';
@@ -16,62 +15,76 @@ class Main extends React.Component {
           title: 'Covid19 India',
           isSelected: this.props.location.pathname === '/home' ? true : false,
           link: '/home',
+          icon: '',
         },
         {
           title: 'About',
           isSelected: this.props.location.pathname === '/about' ? true : false,
           link: '/about',
+          icon: 'fa fa-info-circle',
         },
         {
           title: 'Helpline',
           isSelected: this.props.location.pathname === '/helpline' ? true : false,
           link: '/helpline',
+          icon: 'fa fa-phone',
+        },
+        {
+          title: 'News',
+          isSelected: this.props.location.pathname === '/news' ? true : false,
+          link: '/news',
+          icon: 'fas fa-newspaper',
         },
         {
           title: 'Test Centres',
           isSelected: this.props.location.pathname === '/test-center' ? true : false,
           link: '/test-center',
+          icon: 'fas fa-align-center',
         },
-        // {
-        //   title: 'Sources',
-        //   isSelected: this.props.location.pathname === '/sources' ? true : false,
-        //   link: '/sources',
-        // },
       ],
     };
   }
 
   loading = () => <div>Loading...</div>;
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
+  drawerToggleClickHandler = async () => {
+    await this.setState((prevState) => {
       return {
         sideDrawerOpen: !prevState.sideDrawerOpen,
       };
     });
   };
 
-  backDropClickHandler = async () => {
-    await this.setState({
-      sideDrawerOpen: false,
-    });
+  handleClick = async (index) => {
+    let navData = JSON.parse(JSON.stringify(this.state.navData));
+    for (let i in navData) {
+      if (navData[i].link === index.link) {
+        navData[i].isSelected = true;
+      } else navData[i].isSelected = false;
+    }
+    await this.setState({ navData });
   };
 
   render() {
     let backdrop;
     if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backDropClickHandler} />;
+      backdrop = <Backdrop click={this.drawerToggleClickHandler} />;
     }
     return (
       <div>
-        <Navbar drawerClickHandler={this.drawerToggleClickHandler} navClass={this.state.navData} />
+        <Navbar
+          drawerClickHandler={this.drawerToggleClickHandler}
+          navClass={this.state.navData}
+          addClass={this.handleClick}
+        />
         <SideDrawer
           show={this.state.sideDrawerOpen}
-          bacDrawer={this.backDropClickHandler}
+          bacDrawer={this.drawerToggleClickHandler}
           navClass={this.state.navData}
+          addClass={this.handleClick}
         />
         {backdrop}
-        <Container fluid>
+        <main>
           <Suspense fallback={this.loading()}>
             <Switch>
               {routes.map((route, idx) => {
@@ -88,7 +101,7 @@ class Main extends React.Component {
               <Redirect from="/" to="/home" />
             </Switch>
           </Suspense>
-        </Container>
+        </main>
       </div>
     );
   }

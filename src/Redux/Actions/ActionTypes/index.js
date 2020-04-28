@@ -1,1 +1,7 @@
-export { ContactUsAction, DailyStats } from '../Action/ContactAction';
+export {
+  StateWiseAction,
+  ResionalContactAction,
+  WorldCasesAction,
+  NewsAction,
+  VrdlAction,
+} from '../Action/CoronaAction';

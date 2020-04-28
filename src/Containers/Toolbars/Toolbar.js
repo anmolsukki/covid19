@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DrawerToggleButton from './DrawerToggleButton';
+import DrawerToggleButton from '../DrawerToggle/DrawerToggleButton';
+import 'font-awesome/css/font-awesome.min.css';
 import './Toolbar.css';
 
 const navbar = (props) => {
@@ -18,7 +19,9 @@ const navbar = (props) => {
                 <li key={item.link}>
                   <Link
                     to={item.link}
-                    className={`nav-option ${item.isSelected === true ? 'active' : ''}`}>
+                    className={`nav-option ${item.isSelected === true ? 'active' : ''}`}
+                    onClick={() => props.addClass(item)}>
+                    <i className={item.icon} style={{ margin: '4px' }}></i>
                     {item.title}
                   </Link>
                 </li>

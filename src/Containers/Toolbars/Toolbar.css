@@ -28,6 +28,7 @@
 .toolbar_navigation-items a {
   color: #ffffff;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .toolbar_navigation-items a:hover,
